@@ -25,6 +25,8 @@ target_link_libraries(test_version
     # helloworld
 )
 
+install(TARGETS helloworld RUNTIME DESTINATION bin)
+
 set(CPACK_GENERATOR DEB)
 
 set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")
