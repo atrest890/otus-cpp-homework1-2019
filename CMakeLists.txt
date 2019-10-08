@@ -33,6 +33,8 @@ set(CPACK_PACKAGE_VERSION_PATCH "${PROJECT_VERSION_PATCH}")
 
 set(CPACK_PACKAGE_CONTACT swarovski991@gmail.com)
 
+set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS ON)
+
 include(CPack)
 
 enable_testing()

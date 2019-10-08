@@ -9,11 +9,11 @@ script:
 - cmake .
 - cmake --build .
 - cmake --build . --target test
-- cmake --build . --target helloworld
+- cmake --build . --target package
 deploy:
   provider: script
   skip_cleanup: true
   script:
-  - curl -f -T cmake-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -uatrest890:$BINTRAY_API_KEY "https://api.bintray.com/content/atrest890/otus-cpp-2019/otus-cpp-homework-2019/$TRAVIS_BUILD_NUMBER/cmake-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=xenial;deb_component=main;deb_architecture=amd64;publish=1"
+  - curl -f -T helloworld-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -uatrest890:$BINTRAY_API_KEY "https://api.bintray.com/content/atrest890/otus-cpp-2019/otus-cpp-homework-2019/$TRAVIS_BUILD_NUMBER/cmake-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=xenial;deb_component=main;deb_architecture=amd64;publish=1"
 
 
