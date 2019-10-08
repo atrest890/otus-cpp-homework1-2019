@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.8)
 
-project(helloworld VERSION 0.0 $ENV{TRAVIS_BUILD_NMBER})
+project(helloworld VERSION 0.0.$ENV{TRAVIS_BUILD_NMBER})
 
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
@@ -22,7 +22,7 @@ set_target_properties(test_version PROPERTIES
 
 target_link_libraries(test_version
     ${Boost_LIBRARIES}
-    helloworld
+    # helloworld
 )
 
 set(CPACK_GENERATOR DEB)
